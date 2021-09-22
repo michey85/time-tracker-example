@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/michey85/time-tracker-example)
+- [Solution URL](https://www.frontendmentor.io/solutions/time-tracker-with-vanillas-htmlcssjs-IYOBMhCgy)
 - [Live Site URL](https://time-tracker-mauve.vercel.app/)
 
 ## Built with
