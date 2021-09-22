@@ -34,22 +34,22 @@ class DashboardItem {
         const {current, previous} = timeframes[this.view.toLowerCase()];
 
         this.container.insertAdjacentHTML('beforeend', `
-        <div class="dashboard__item dashboard__item--${id}">
-        <div class="tracking-card">
-          <div class="tracking-card__header">
-            <h4 class="tracking-card__title">${title}</h4>
-            <img class="tracking-card__menu" src="images/icon-ellipsis.svg" alt="menu">
-          </div>
-          <div class="tracking-card__body">
-            <div class="tracking-card__time">
-              ${current}hrs
+            <div class="dashboard__item dashboard__item--${id}">
+                <article class="tracking-card">
+                <div class="tracking-card__header">
+                    <h4 class="tracking-card__title">${title}</h4>
+                    <img class="tracking-card__menu" src="images/icon-ellipsis.svg" alt="menu">
+                </div>
+                <div class="tracking-card__body">
+                    <div class="tracking-card__time">
+                        ${current}hrs
+                    </div>
+                    <div class="tracking-card__prev-period">
+                        Last ${DashboardItem.PERIODS[this.view]} - ${previous}hrs
+                    </div>
+                </div>
+                </article>
             </div>
-            <div class="tracking-card__prev-period">
-              Last ${DashboardItem.PERIODS[this.view]} - ${previous}hrs
-            </div>
-          </div>
-        </div>
-      </div>
         `)
 
         this.time = this.container.querySelector(`.dashboard__item--${id} .tracking-card__time`);
